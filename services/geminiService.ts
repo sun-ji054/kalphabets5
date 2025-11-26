@@ -16,11 +16,13 @@ const responseSchema: Schema = {
     },
     meaning: {
       type: Type.STRING,
-      description: "A brief explanation of the name's meaning or a fun fact about the name in a Korean context (written in Korean).",
+      description:
+        "A brief explanation of the name's meaning or a fun fact about the name in a Korean context (written in Korean).",
     },
     origin: {
       type: Type.STRING,
-      description: "The likely linguistic origin of the input name (e.g., English, French, Japanese).",
+      description:
+        "The likely linguistic origin of the input name (e.g., English, French, Japanese).",
     },
   },
   required: ["hangul", "romanization", "meaning", "origin"],
@@ -48,6 +50,8 @@ export const translateName = async (name: string): Promise<NameTranslation> => {
     return JSON.parse(text) as NameTranslation;
   } catch (error) {
     console.error("Gemini API Error:", error);
-    throw new Error("이름을 변환하는 중에 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+    throw new Error(
+      "이름을 변환하는 중에 오류가 발생했습니다. 잠시 후 다시 시도해주세요."
+    );
   }
 };
