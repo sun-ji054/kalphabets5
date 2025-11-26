@@ -1,0 +1,5 @@
+{
+  "name": "NameKey - Foreign Name to Hangul",
+  "description": "A mobile-first application that translates foreign names into natural Korean Hangul using AI.",
+  "requestFramePermissions": []
+}
